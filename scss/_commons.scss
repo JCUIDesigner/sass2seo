@@ -1,0 +1,144 @@
+//map/
+$palette:(
+	'pc01':#FCF2FF,
+	'pc02':#F5CCFF,
+	'pc03':#EEA6FF,
+	'pc04':#DA79F1,
+	'pc05':#B255C9,
+	'pc06':#8B37A0,
+	'pc07':#661F77,
+	'pc08':#420E4E,
+	'sc01':#FFECF3,
+	'sc02':#FFB5CF,
+	'sc03':#FF7DAB,
+	'sc04':#F34281,
+	'sc05':#CA2B64,
+	'sc06':#A11949,
+	'sc07':#790B32,
+	'sc08':#50031E,
+	'bw01':#000000,
+	'bw02':#ffffff,
+	'nc01':#EEEEEE,
+	'nc02':#CCCCCC,
+	'nc03':#AAAAAA,
+	'nc04':#888888,
+	'nc05':#666666,
+	'nc06':#444444,);
+
+//sizes/
+$w-a:auto;
+$w-100:100%;
+$w-75:75%;
+$w-50:50%;
+$w-25:25%;
+
+//Buttons/
+.btnPrimary{
+	background-color: map-get($map:$palette,$key:'pc05');
+	color: map-get($map:$palette,$key:'bw02');
+	font-weight: 700;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	&:hover{
+		background-color: map-get($map:$palette,$key:'pc08');
+		color: map-get($map:$palette,$key:'bw02');
+		cursor: pointer;
+	}
+}
+.btnPrimaryRounded{
+	@extend.btnPrimary;
+	border-radius: 8px;
+}
+
+.btnPrimary2{
+	background-color: map-get($map:$palette,$key:'bw02');
+	color: map-get($map:$palette,$key:'pc07');
+	font-weight: 700;
+	padding: 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	&:hover{
+		background-color: map-get($map:$palette,$key:'pc07');
+		color: map-get($map:$palette,$key:'bw02');
+		cursor: pointer;
+	}
+}
+.btnPrimary2Rounded{
+	@extend.btnPrimary2;
+	border-radius: 8px;
+}
+
+.btnSecondary{
+	background-color: transparent;
+	border-color: map-get($map:$palette,$key:'pc07');
+	color: map-get($map:$palette,$key:'pc07');
+	padding: 16px;
+	margin: 16px;
+	&hover{
+		border-color: map-get($map:$palette,$key:'pc08');
+		color: map-get($map:$palette,$key:'pc08');
+		background-color: map-get($map:$palette,$key:'pc02');
+		cursor: pointer;
+	}
+}
+.btnSecondaryRounded{
+	@extend.btnSecondary;
+	border-radius: 8px;
+}
+
+
+//Text/
+@mixin text($font-size,$line-height,$color,$weight){
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $color;
+	font-weight: $weight;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.textTitleXL{
+	@include text(3em,3em,map-get($map:$palette,$key:'pc06'),700)
+}
+.textTitleL{
+	@include text(2em,2em,map-get($map:$palette,$key:'pc06'),700)
+}
+.textTitleM{
+	@include text(1em,1.4em,map-get($map:$palette,$key:'pc06'),700)
+}
+.textTitleXLDark{
+	@include text(3em,3em,map-get($map:$palette,$key:'bw02'),700)
+}
+.textTitleLDark{
+	@include text(2em,2.4em,map-get($map:$palette,$key:'bw02'),700)
+}
+.textTitleMDark{
+	@include text(1em,1.4em,map-get($map:$palette,$key:'bw02'),700)
+}
+.textParagraph{
+	@include text(1em,1.4em,map-get($map:$palette,$key:'nc04'),400)
+}
+.textParagraph02{
+	@include text(1em,1.4emem,map-get($map:$palette,$key:'bw01'),400)
+}
+.textParagraphDark{
+	@include text(1em,1.4emem,map-get($map:$palette,$key:'bw02'),400)
+}
+
+//Backgrounds/
+.BgLight{
+	background-color: map-get($map:$palette,$key:'pc01');
+}
+.BgLight2{
+	background-color: map-get($map:$palette,$key:'pc03');
+}
+.BgMedium{
+	background-color: map-get($map:$palette,$key:'pc05');
+}
+.BgDark{
+	background-color: map-get($map:$palette,$key:'pc07');
+}
+.BgDark2{
+	background-color: map-get($map:$palette,$key:'pc08');
+}

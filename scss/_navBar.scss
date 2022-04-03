@@ -1,0 +1,24 @@
+.botonera{
+	background-color: map-get($map:$palette,$key:'pc07');
+	img{
+		width:$w-50;
+	}
+	ul{
+		li{
+			list-style: none;
+			a{
+				color:map-get($map:$palette,$key:'bw02');
+				font-family:$fontMain;
+				font-weight:$textBold;
+				font-size: $textSm;
+				margin-right: 10px;
+				margin-left: 10px;
+				&:hover{
+					font-weight:$textBold;
+					color:map-get($map:$palette,$key:'pc06');
+				}
+
+			}
+		}
+	}
+}

@@ -75,7 +75,7 @@ $w-25:25%;
 	color: map-get($map:$palette,$key:'pc07');
 	padding: 16px;
 	margin: 16px;
-	&hover{
+	&:hover{
 		border-color: map-get($map:$palette,$key:'pc08');
 		color: map-get($map:$palette,$key:'pc08');
 		background-color: map-get($map:$palette,$key:'pc02');
@@ -141,4 +141,14 @@ $w-25:25%;
 }
 .BgDark2{
 	background-color: map-get($map:$palette,$key:'pc08');
+}
+
+//Animations/
+.scale1{
+	transform: scale(1);
+	transition: transform 0.3s;
+	&:hover{
+		transform: scale(1.08);
+		transition: transform 0.3s;
+	}
 }
